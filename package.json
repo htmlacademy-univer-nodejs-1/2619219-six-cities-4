@@ -1,6 +1,6 @@
 {
   "name": "six-cities",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Проект «Шесть городов» от HTML Academy",
   "keywords": [
     "rest",
@@ -12,7 +12,7 @@
     "start": "npm run build && node ./dist/main.js",
     "build": "npm run clean && npm run compile",
     "lint": "eslint src/ --ext .ts",
-    "compile": "tsc -p tsconfig.json",
+    "compile": "copyfiles package.json dist/ && tsc -p tsconfig.json && copyfiles -u 1 mocks/* dist/mocks/",
     "clean": "rimraf dist",
     "ts": "ts-node"
   },
@@ -20,6 +20,7 @@
     "@types/node": "18.17.17",
     "@typescript-eslint/eslint-plugin": "6.7.0",
     "@typescript-eslint/parser": "6.7.0",
+    "copyfiles": "^2.4.1",
     "eslint": "8.49.0",
     "eslint-config-htmlacademy": "9.1.1",
     "rimraf": "5.0.1",
@@ -30,5 +31,8 @@
   "engines": {
     "node": "^18.0.0",
     "npm": ">=8"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1"
   }
 }
