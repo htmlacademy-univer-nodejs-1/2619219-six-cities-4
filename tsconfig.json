@@ -25,7 +25,8 @@
     ],
     "lib": [
       "ESNext"
-    ]
+    ],
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*.ts"
