@@ -1,5 +1,5 @@
 export type Comment = {
-    text: string;
-    postDate: Date;
-    commentRating: number;
+  text: string;
+  postDate: Date;
+  commentRating: number;
 }
